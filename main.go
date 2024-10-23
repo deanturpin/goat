@@ -10,8 +10,10 @@ import (
 
 func main() {
 
+	defer fmt.Println("This is the end")
+
 	// Make the HTTP GET request
-	resp, err := http.Get("https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=3")
+	resp, err := http.Get("https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=2")
 	if err != nil {
 		log.Fatalf("Failed to fetch data: %v", err)
 	}
